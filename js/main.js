@@ -3,7 +3,7 @@ const toggleDivs = document.querySelectorAll(".toggle");
 toggleDivs.forEach((item) => {
 	item.addEventListener("click", (event) => {
 		const keyName = item.closest("tr").id;
-		const dropdown = document.querySelector(`.${keyName}`);
+		const dropdown = item.closest("tr").parentElement.parentElement.querySelector(`.${keyName}`);
 		dropdown.classList.toggle("hide");
         const toggleIcon = item.closest("tr").querySelector(".arrow-up");
 		toggleIcon.classList.toggle("rotate");
