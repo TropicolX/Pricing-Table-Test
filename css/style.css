@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --background-color: #f0f0f0;
+  --primary-color: #a7ca1aff;
+  --secondary-color: #7d6e99ff;
+  --tertiary-color: #4c7da5ff;
+  --grey-color: #636363ff;
+  --light-grey-color: #7a7a7a;
+  --small-text-color: #969696ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--small-text-color);
+  margin-bottom: 1.8rem;
+}
+
+img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.main {
+  position: relative;
+  max-width: 79.1rem;
+  /*
+	padding: 2rem;
+    margin: 0 auto;
+    overflow: hidden;
+    */
+}
+
+.btn-primary, .btn-secondary, .btn-tertiary {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 3.2rem;
+  margin: 3px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn-tertiary {
+  background-color: var(--tertiary-color);
+}
+
+#best-value {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+#best-value:hover {
+  background-color: transparent;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0 none;
+}
+
+.price-table .call-to-action:hover {
+  background-color: #fff;
+}
+
+.price-table tr td {
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+.price-table tr td:first-child {
+  border-left: 0 none;
+}
+
+.price-table tr td:not(:first-child) {
+  text-align: center;
+}
+
+.price-table tr {
+  background-color: #ffffff;
+}
+
+.price-table tr:hover {
+  background-color: #eeeeee;
+}
+
+.price-table tr:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Highlighted column */
+/*
+.price-table tr:nth-child(2n) td:nth-child(3) {
+	background-color: rgba(216, 214, 227, 0.25);
+}
+*/
+.price h2 {
+  color: #636363ff;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  margin: 0.6rem 0;
+  font-size: 2.1rem;
+}
+
+.price-table td.price {
+  padding: 3rem 24px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.price-table .price-best-value {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0 none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 2px 48px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.price-table .price-blank {
+  border: 0 none;
+}
+
+.dropdown {
+  background-color: #f7f7f7 !important;
+}
+
+.dropdown span {
+  margin: 0 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dropdown .flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown .flex .img-container {
+  cursor: pointer;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown .flex .arrow-up {
+  width: 14px;
+  height: 6px;
+  transform: rotate(180deg);
+  transition: transform 0.25s ease-in-out;
+}
+
+.dropdown .flex .arrow-up.rotate {
+  transform: rotate(0deg);
+}
+
+.dropdown .flex .info {
+  width: 14px;
+}
+
+.dropdown .toggle {
+  cursor: pointer;
+}
+
+.dropdown-items tr:nth-child(n) > td:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.check,
+.cross {
+  width: 22px;
+  height: 15px;
+}
+
+.dropdown-items {
+  transition: all 0.25s;
+  overflow: hidden;
+}
+
+.dropdown-items tr {
+  color: #7a7a7a;
+}
+
+.dropdown-items tr span {
+  margin: 0 24px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hide {
+  max-height: 0;
+  opacity: 0;
+  visibility: collapse;
+}
+
+.hide tr {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.01) !important;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    width: 900px;
+    margin: 0;
+  }
+  .btn-primary, .btn-secondary, .btn-tertiary {
+    width: 12rem;
+    padding: 1rem;
+  }
+  .dropdown .flex {
+    justify-content: space-between;
+  }
+  .dropdown-items tr:nth-child(n) > td:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 600px;
+  }
+}
