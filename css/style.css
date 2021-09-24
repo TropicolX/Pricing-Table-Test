@@ -18,10 +18,6 @@
 
 body {
   background: var(--background-color);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 small {
@@ -38,18 +34,16 @@ img {
 
 .main {
   position: relative;
-  max-width: 79.1rem;
-  /*
-	padding: 2rem;
-    margin: 0 auto;
-    overflow: hidden;
-    */
+  max-width: 1140px;
+  margin: 40px auto;
+  overflow: auto;
+  padding: 0 40px;
 }
 
 .btn-primary, .btn-secondary, .btn-tertiary {
   display: inline-block;
   border-radius: 5px;
-  padding: 10px 3.2rem;
+  padding: 12px 1.9rem;
   margin: 3px;
   color: #fff;
   text-decoration: none;
@@ -82,7 +76,6 @@ img {
 }
 
 .price-table {
-  width: 100%;
   border-collapse: collapse;
   border: 0 none;
 }
@@ -166,6 +159,7 @@ img {
   position: relative;
   display: flex;
   align-items: center;
+  user-select: none;
 }
 
 .dropdown .flex .img-container {
@@ -233,13 +227,10 @@ img {
 }
 
 @media (max-width: 1024px) {
-  .main {
-    width: 900px;
-    margin: 0;
-  }
   .btn-primary, .btn-secondary, .btn-tertiary {
-    width: 12rem;
-    padding: 1rem;
+    width: 10rem;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
   .dropdown .flex {
     justify-content: space-between;
@@ -251,8 +242,23 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .main {
-    width: 600px;
+    max-width: 700px;
+    padding: 0;
+  }
+  .btn-primary, .btn-secondary, .btn-tertiary {
+    width: 8rem;
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+  .price-table .price-best-value {
+    padding: 2px 20px;
+  }
+  .price-table tr td {
+    padding: 10px 20px;
+  }
+  .price-table td.price {
+    padding: 20px 15px;
   }
 }
