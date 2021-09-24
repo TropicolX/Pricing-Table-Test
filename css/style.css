@@ -285,6 +285,9 @@ img {
     height: 100%;
     overflow: hidden;
   }
+  .btn-primary, .btn-secondary, .btn-tertiary {
+    width: 10rem;
+  }
   .price-table.desktop {
     display: none;
   }
@@ -299,6 +302,7 @@ img {
   .price-table.pro {
     display: table;
     margin-bottom: 2rem;
+    border-radius: 20px;
   }
 }
 
