@@ -306,17 +306,23 @@ img {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .main {
-    width: 280px;
+    width: 320px;
   }
   .price-table .price-best-value {
     padding: 2px 20px;
   }
   .price-table tr td {
-    padding: 10px 8px;
+    padding: 10px 10px;
   }
   .price-table td.price {
     padding: 20px 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: 300px;
   }
 }
