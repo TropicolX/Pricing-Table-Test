@@ -4,7 +4,7 @@ const basic = table.cloneNode(true);
 const business = table.cloneNode(true);
 const pro = table.cloneNode(true);
 
-// Create Basic table for Mobile
+// CREATE BASIC TABLE FOR MOBILE
 basic.classList.remove("desktop");
 basic.classList.add("basic");
 basic.children[0].children[0].remove();
@@ -20,7 +20,7 @@ for (i = 0; i < callToAction1.length; i++) {
 	callToAction1[i].children[0].setAttribute("colspan", "2");
 }
 
-// Create Business table for Mobile
+// CREATE BUSINESS TABLE FOR MOBILE
 business.classList.remove("desktop");
 business.classList.add("business");
 const trElements2 = business.querySelectorAll("tr");
@@ -40,7 +40,7 @@ for (i = 0; i < callToAction2.length; i++) {
 	callToAction2[i].children[0].setAttribute("colspan", "2");
 }
 
-// Create Pro table for Mobile
+// CREATE PRO TABLE FOR MOBILE
 pro.classList.remove("desktop");
 pro.classList.add("pro");
 pro.children[0].children[0].remove();
@@ -56,14 +56,12 @@ for (i = 0; i < callToAction3.length; i++) {
 	callToAction3[i].children[0].setAttribute("colspan", "2");
 }
 
-// Add tables to main section
-console.log(basic);
-console.log(business);
+// ADD TABLES TO MAIN SECTION
 main.appendChild(basic);
 main.appendChild(business);
 main.appendChild(pro);
 
-// Dropdown functionality
+// DROPDOWN FUNCTIONALITY
 const toggleDivs = document.querySelectorAll(".toggle");
 
 toggleDivs.forEach((item) => {
