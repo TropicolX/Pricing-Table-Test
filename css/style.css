@@ -271,7 +271,7 @@ img {
 @media (max-width: 600px) {
   .main {
     width: 360px;
-    height: 100%;
+    padding-left: 1px;
     overflow: hidden;
   }
   .btn-primary, .btn-secondary, .btn-tertiary {

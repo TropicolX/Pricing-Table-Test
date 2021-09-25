@@ -1,3 +1,4 @@
+// VARIABLES AND CONSTANTS
 const main = document.querySelector(".main");
 const table = document.querySelector(".price-table.desktop");
 const basic = table.cloneNode(true);
